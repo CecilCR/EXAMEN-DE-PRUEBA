@@ -6,7 +6,7 @@
 <title>Examen de Prueba — Gestión de las Relaciones en las Organizaciones</title>
 <meta property="og:title" content="Examen de Prueba — Gestión de las Relaciones en las Organizaciones">
 <meta property="og:description" content="Instrumento de práctica con retroalimentación formativa. Representa la estructura del examen parcial.">
-<meta property="og:type" content="sitio-web">
+<meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -998,17 +998,17 @@ p.addEventListener('animationend', () => p.remove());
 }
  
 updateProgress();
-updateProgress();
 </script>
 
 </div>
 
 <script>
-const inicio = new Date("2026-04-28T00:00:00");
-const cierre = new Date("2026-05-29T09:00:59");
-const ahora = new Date();
+const inicio = new Date(2026,3,28,0,0,0);
+const cierre = new Date(2026,3,29,9,0,0);
 
-if (ahora >= inicio && ahora <= cierre) {
+if (ahora >= inicio && ahora < cierre) {
+   document.getElementById("contenido-examen").style.display="block";
+}
 
 document.getElementById("contenido-examen").style.display="block";
 
@@ -1027,7 +1027,7 @@ box-shadow:0 4px 20px rgba(0,0,0,.08);
 ">
 <h1>Periodo de práctica cerrado</h1>
 <p>
-Este examen estuvo disponible solo del 10 al 14 de mayo.
+Este examen estuvo disponible solo por un período del al .
 </p>
 </div>
 `;
