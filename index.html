@@ -3,44 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Examen de Prueba — Gestión de las Relaciones en las Organizaciones</title>
-<meta property="og:title" content="Examen de Prueba — Gestión de las Relaciones en las Organizaciones">
-<meta property="og:description" content="Instrumento de práctica con retroalimentación formativa. Representa la estructura del examen parcial.">
-<meta property="og:type" content="sitio-web">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Examen de Prueba - Gestion de las Relaciones en las Organizaciones</title>
+<meta property="og:title" content="Examen de Prueba - Gestion de las Relaciones en las Organizaciones">
+<meta property="og:description" content="Instrumento de practica con retroalimentacion formativa. Representa la estructura del examen parcial.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink:      #1a1a2e;
-    --paper:    #faf9f6;
-    --accent:   #c8522a;
-    --accent2:  #2a6c8f;
-    --gold:     #d4a017;
-    --success:  #2d6a4f;
-    --muted:    #6b6b7b;
-    --border:   #e2ded8;
-    --card-bg:  #ffffff;
-    --shadow:   0 4px 24px rgba(26,26,46,.08);
-    --radius:   12px;
-    --warn-bg:  #fff8e6;
-    --warn-border: #e6b800;
+    --ink: #1a1a2e;
+    --paper: #faf9f6;
+    --accent: #c8522a;
+    --accent2: #2a6c8f;
+    --gold: #d4a017;
+    --success: #2d6a4f;
+    --danger: #b83225;
+    --muted: #5d5d6f;
+    --border: #e2ded8;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(26,26,46,.08);
+    --radius: 12px;
+    --warn-bg: #fff8e6;
+    --warn-border: #d9a900;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', Arial, sans-serif;
     background: var(--paper);
     color: var(--ink);
     min-height: 100vh;
     padding: 0 0 80px;
   }
 
-  /* ══ BANNER DE PRUEBA ══ */
+  button, textarea, select { font: inherit; }
+  button:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 3px solid rgba(42,108,143,.35);
+    outline-offset: 3px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .test-banner {
     background: var(--warn-bg);
     border-bottom: 2px solid var(--warn-border);
     padding: 14px 24px;
-    text-align: center;
   }
   .test-banner-inner {
     max-width: 900px;
@@ -48,34 +65,24 @@
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    text-align: left;
   }
-  .test-banner-icon {
-    font-size: 26px;
-    flex-shrink: 0;
-    line-height: 1;
-    margin-top: 2px;
-  }
+  .test-banner-icon { font-size: 26px; line-height: 1; margin-top: 2px; }
   .test-banner-text strong {
     display: block;
     font-size: 14px;
     font-weight: 700;
-    color: #7a5c00;
+    color: #6f5300;
     margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: .06em;
   }
   .test-banner-text p {
     font-size: 13px;
-    color: #5a4400;
+    color: #4f3b00;
     line-height: 1.55;
   }
-  .test-banner-text p em {
-    font-style: italic;
-    font-weight: 600;
-  }
+  .test-banner-text p em { font-style: italic; font-weight: 600; }
 
-  /* ══ HEADER ══ */
   .exam-header {
     background: var(--ink);
     color: #fff;
@@ -86,16 +93,20 @@
   .exam-header::before {
     content: '';
     position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
+    top: -60px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background: rgba(200,82,42,.18);
   }
   .exam-header::after {
     content: '';
     position: absolute;
-    bottom: -40px; left: 200px;
-    width: 180px; height: 180px;
+    bottom: -40px;
+    left: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background: rgba(42,108,143,.2);
   }
@@ -113,12 +124,12 @@
     margin-bottom: 16px;
   }
   .exam-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(26px, 4vw, 40px);
     line-height: 1.2;
     margin-bottom: 12px;
   }
-  .exam-subtitle { color: rgba(255,255,255,.6); font-size: 15px; font-weight: 300; }
+  .exam-subtitle { color: rgba(255,255,255,.72); font-size: 15px; font-weight: 300; }
   .meta-strip {
     display: flex;
     gap: 32px;
@@ -127,10 +138,9 @@
     padding-top: 24px;
     border-top: 1px solid rgba(255,255,255,.12);
   }
-  .meta-item { font-size: 13px; color: rgba(255,255,255,.7); }
+  .meta-item { font-size: 13px; color: rgba(255,255,255,.75); }
   .meta-item strong { color: #fff; display: block; font-size: 15px; margin-bottom: 2px; }
 
-  /* ══ PROGRESS BAR ══ */
   .progress-wrap {
     background: var(--border);
     height: 5px;
@@ -145,10 +155,8 @@
     width: 0%;
   }
 
-  /* ══ LAYOUT ══ */
   .main { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-  /* ══ SECTION LABEL ══ */
   .section-label {
     display: flex;
     align-items: center;
@@ -158,19 +166,21 @@
   }
   .section-label:first-child { margin-top: 0; }
   .section-num {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: var(--ink);
     color: #fff;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 18px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
   }
-  .section-info h2 { font-family: 'Playfair Display', serif; font-size: 20px; }
+  .section-info h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; }
   .section-info p { font-size: 13px; color: var(--muted); margin-top: 2px; }
 
-  /* ══ CARD ══ */
   .card {
     background: var(--card-bg);
     border-radius: var(--radius);
@@ -182,7 +192,7 @@
   }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .question-badge {
@@ -214,11 +224,19 @@
     font-size: 16px;
     line-height: 1.65;
     margin-bottom: 22px;
-    font-weight: 400;
   }
-  .question-text strong { font-weight: 600; }
+  .question-text strong { font-weight: 700; }
+  .instruction-note {
+    background: #f7f4ee;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: #4d3a00;
+    font-size: 13px;
+    line-height: 1.55;
+    margin: -8px 0 20px;
+  }
 
-  /* ══ MCQ OPTIONS ══ */
   .options-grid { display: flex; flex-direction: column; gap: 10px; }
   .option-btn {
     display: flex;
@@ -231,7 +249,6 @@
     cursor: pointer;
     transition: all .2s;
     text-align: left;
-    font-family: 'DM Sans', sans-serif;
     font-size: 15px;
     line-height: 1.5;
     color: var(--ink);
@@ -242,34 +259,24 @@
     background: #f0f7fb;
   }
   .option-btn .opt-letter {
-    min-width: 30px; height: 30px;
+    min-width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: var(--border);
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
     font-size: 13px;
     flex-shrink: 0;
     transition: all .2s;
   }
-  .option-btn.correct {
-    border-color: var(--success);
-    background: #eaf4f0;
-  }
-  .option-btn.correct .opt-letter {
-    background: var(--success);
-    color: #fff;
-  }
-  .option-btn.wrong {
-    border-color: #c0392b;
-    background: #fdf0ee;
-  }
-  .option-btn.wrong .opt-letter {
-    background: #c0392b;
-    color: #fff;
-  }
+  .option-btn.correct { border-color: var(--success); background: #eaf4f0; }
+  .option-btn.correct .opt-letter { background: var(--success); color: #fff; }
+  .option-btn.wrong { border-color: var(--danger); background: #fdf0ee; }
+  .option-btn.wrong .opt-letter { background: var(--danger); color: #fff; }
   .option-btn:disabled { cursor: default; }
 
-  /* ══ FEEDBACK BOX ══ */
   .feedback-box {
     display: none;
     margin-top: 20px;
@@ -286,8 +293,8 @@
   }
   .feedback-box.wrong-fb {
     background: #fdf0ee;
-    border-left: 4px solid #c0392b;
-    color: #6b1e17;
+    border-left: 4px solid var(--danger);
+    color: #5f1a13;
   }
   .feedback-box.show { display: block; }
   .feedback-box .fb-label {
@@ -299,7 +306,6 @@
     display: block;
   }
 
-  /* ══ ANSWER KEY ══ */
   .answer-key {
     background: var(--ink);
     color: #fff;
@@ -308,7 +314,7 @@
     margin-top: 12px;
   }
   .answer-key h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 18px;
     color: var(--gold);
     margin-bottom: 18px;
@@ -326,11 +332,10 @@
     align-items: flex-start;
     gap: 12px;
   }
-  .key-q { font-size: 12px; color: rgba(255,255,255,.5); }
+  .key-q { font-size: 12px; color: rgba(255,255,255,.62); }
   .key-a { font-weight: 700; font-size: 18px; color: var(--gold); }
-  .key-explain { font-size: 13px; color: rgba(255,255,255,.75); line-height: 1.55; }
+  .key-explain { font-size: 13px; color: rgba(255,255,255,.82); line-height: 1.55; }
 
-  /* ══ CASE STUDY ══ */
   .case-intro {
     background: linear-gradient(135deg, #1a1a2e 0%, #2a3a5c 100%);
     color: #fff;
@@ -340,31 +345,16 @@
     position: relative;
     overflow: hidden;
   }
-  .case-intro::after {
-    content: '📦';
-    position: absolute;
-    right: 24px; top: 24px;
-    font-size: 44px;
-    opacity: .12;
-  }
   .case-intro h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 19px;
-    margin-bottom: 6px;
+    margin-bottom: 14px;
     color: var(--gold);
-  }
-  .case-intro .case-premise {
-    font-size: 13px;
-    font-style: italic;
-    color: rgba(255,255,255,.55);
-    margin-bottom: 16px;
-    border-left: 3px solid var(--gold);
-    padding-left: 12px;
   }
   .case-intro p {
     font-size: 14.5px;
     line-height: 1.78;
-    color: rgba(255,255,255,.85);
+    color: rgba(255,255,255,.88);
     margin-bottom: 10px;
   }
   .case-intro p:last-child { margin-bottom: 0; }
@@ -380,37 +370,26 @@
     border-radius: 8px;
     padding: 12px 14px;
   }
-  .data-card .d-label { font-size: 11px; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .08em; }
-  .data-card .d-value { font-size: 17px; font-weight: 700; color: var(--gold); margin-top: 4px; line-height: 1.2; }
-
-  /* ══ OPEN QUESTION ══ */
-  .sub-label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .1em;
+  .data-card .d-label {
+    font-size: 11px;
+    color: rgba(255,255,255,.62);
     text-transform: uppercase;
-    color: var(--accent2);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    letter-spacing: .08em;
   }
-  .part-badge {
-    background: var(--accent2);
-    color: #fff;
-    border-radius: 4px;
-    padding: 2px 8px;
-    font-size: 10px;
+  .data-card .d-value {
+    font-size: 17px;
     font-weight: 700;
-    letter-spacing: .06em;
+    color: var(--gold);
+    margin-top: 4px;
+    line-height: 1.2;
   }
+
   .open-textarea {
     width: 100%;
     min-height: 190px;
     border: 2px solid var(--border);
     border-radius: 10px;
     padding: 16px;
-    font-family: 'DM Sans', sans-serif;
     font-size: 15px;
     line-height: 1.65;
     color: var(--ink);
@@ -419,27 +398,46 @@
     background: var(--paper);
     margin-top: 8px;
   }
-  .open-textarea:focus {
-    outline: none;
-    border-color: var(--accent2);
-    background: #fff;
-  }
+  .open-textarea:focus { border-color: var(--accent2); background: #fff; }
   .word-counter {
     text-align: right;
     font-size: 12px;
     color: var(--muted);
     margin-top: 6px;
   }
-  .word-counter.warn { color: var(--accent); font-weight: 600; }
-  .word-counter.ok   { color: var(--success); font-weight: 600; }
+  .word-counter.warn { color: var(--accent); font-weight: 700; }
+  .word-counter.ok { color: var(--success); font-weight: 700; }
 
-  .part-divider {
-    border: none;
-    border-top: 1px dashed var(--border);
-    margin: 28px 0;
+  .self-check {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f7f4ee;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .self-check label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .self-check select {
+    width: 100%;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .unlock-hint {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
   }
 
-  /* ══ TOGGLE PANELS ══ */
   .toggle-row {
     display: flex;
     gap: 16px;
@@ -452,7 +450,7 @@
     gap: 8px;
     cursor: pointer;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     background: none;
     border: none;
     padding: 0;
@@ -460,34 +458,46 @@
     color: var(--accent2);
   }
   .rubric-toggle.green { color: var(--success); }
-  .rubric-toggle:hover:not(:disabled) { opacity: .65; }
-  .rubric-toggle:disabled {
-    color: var(--border);
-    cursor: not-allowed;
-    opacity: 1;
-  }
+  .rubric-toggle:hover:not(:disabled) { opacity: .68; }
+  .rubric-toggle:disabled { color: #8f8f9d; cursor: not-allowed; opacity: 1; }
 
-  .rubric-panel {
+  .rubric-panel, .model-answer {
     display: none;
     margin-top: 14px;
-    background: #f0f7fb;
-    border: 1px solid #c3dcea;
     border-radius: 10px;
     padding: 20px;
     font-size: 14px;
     line-height: 1.65;
     animation: fadeUp .3s ease;
   }
-  .rubric-panel.open { display: block; }
-  .rubric-panel h4 {
+  .rubric-panel.open, .model-answer.open { display: block; }
+  .rubric-panel {
+    background: #f0f7fb;
+    border: 1px solid #c3dcea;
+  }
+  .model-answer {
+    background: #eaf4f0;
+    border: 1px solid #a8d5bf;
+    color: #1e4d3a;
+    line-height: 1.78;
+  }
+  .rubric-panel h4, .model-answer h4 {
     font-size: 12px;
     font-weight: 700;
-    color: var(--accent2);
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: .08em;
   }
-  .rubric-table { width: 100%; border-collapse: collapse; }
+  .rubric-panel h4 { color: var(--accent2); }
+  .model-answer h4 { color: var(--success); }
+  .model-answer p + p { margin-top: 10px; }
+  .model-answer strong { font-weight: 700; }
+
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
   .rubric-table th {
     background: #daeaf4;
     padding: 8px 12px;
@@ -504,31 +514,6 @@
   }
   .rubric-table tr:last-child td { border-bottom: none; }
 
-  .model-answer {
-    display: none;
-    margin-top: 14px;
-    background: #eaf4f0;
-    border: 1px solid #a8d5bf;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.78;
-    color: #1e4d3a;
-    animation: fadeUp .3s ease;
-  }
-  .model-answer.open { display: block; }
-  .model-answer h4 {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--success);
-    margin-bottom: 10px;
-  }
-  .model-answer p + p { margin-top: 10px; }
-  .model-answer strong { font-weight: 600; }
-
-  /* ══ CLOSE / REINICIAR ══ */
   .bottom-actions {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -539,47 +524,40 @@
     margin-top: 40px;
   }
   .bottom-actions h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 22px;
     margin-bottom: 8px;
   }
   .bottom-actions p { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
-  .btn-primary {
+  .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .btn-primary {
     background: var(--ink);
     color: #fff;
     border: none;
-    border-radius: 10px;
     padding: 14px 32px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .2s;
+    font-weight: 700;
   }
   .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
   .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
     background: transparent;
     color: var(--muted);
     border: 2px solid var(--border);
-    border-radius: 10px;
     padding: 12px 24px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
     margin-left: 12px;
-    transition: all .2s;
   }
   .btn-secondary:hover { border-color: var(--ink); color: var(--ink); }
 
-  /* ══ CONFETTI ══ */
   #confetti-container {
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     pointer-events: none;
     z-index: 9999;
     overflow: hidden;
@@ -587,19 +565,18 @@
   .confetti-piece {
     position: absolute;
     top: -20px;
-    width: 10px; height: 10px;
+    width: 10px;
+    height: 10px;
     border-radius: 2px;
     animation: confetti-fall linear forwards;
   }
   @keyframes confetti-fall {
-    0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
   }
 
-  /* ══ DIVIDER ══ */
   hr.divider { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
 
-  /* ══ RESPONSIVE ══ */
   @media (max-width: 640px) {
     .exam-header { padding: 32px 20px 24px; }
     .main { padding: 28px 14px; }
@@ -608,139 +585,92 @@
     .meta-strip { gap: 18px; }
     .key-grid { grid-template-columns: 1fr; }
     .btn-secondary { margin-left: 0; margin-top: 10px; }
-    .toggle-row { flex-direction: column; gap: 10px; }
+    .toggle-row { flex-direction: column; gap: 10px; align-items: flex-start; }
   }
 </style>
 </head>
 <body>
-
 <div id="mensaje-cierre"></div>
-
 <div id="contenido-examen" style="display:none;">
+<div id="confetti-container" aria-hidden="true"></div>
+<div id="status-region" class="sr-only" aria-live="polite"></div>
 
-<div id="confetti-container"></div>
-
-<!-- ══ BANNER DE PRUEBA ══ -->
 <div class="test-banner">
   <div class="test-banner-inner">
-    <div class="test-banner-icon">🧪</div>
+    <div class="test-banner-icon" aria-hidden="true">🧪</div>
     <div class="test-banner-text">
-      <strong>Examen de Prueba — Solo con fines formativos</strong>
-      <p>Este instrumento presenta la <em>estructura</em> del examen parcial (tipos de preguntas, extensión esperada y criterios de evaluación). <em>No representa ni anticipa el nivel de dificultad ni los temas específicos del examen real.</em> Su propósito es familiarizarte con el formato y ofrecerte retroalimentación de aprendizaje. No tiene calificación.</p>
+      <strong>Examen de Prueba - Solo con fines formativos</strong>
+      <p>Este instrumento presenta la <em>estructura</em> del examen parcial: tipos de preguntas, extension esperada y criterios de evaluacion. <em>No representa ni anticipa el nivel de dificultad ni los temas especificos del examen real.</em> Su proposito es familiarizarte con el formato y ofrecer retroalimentacion de aprendizaje. No tiene calificacion.</p>
     </div>
   </div>
 </div>
 
-<!-- ══ HEADER ══ -->
 <header class="exam-header">
   <div class="header-inner">
-    <span class="course-tag">Instrumento de Práctica</span>
-    <h1 class="exam-title">Gestión de las Relaciones<br>en las Organizaciones</h1>
-    <p class="exam-subtitle">Examen de prueba · Estructura del parcial · Sin calificación · Con retroalimentación formativa</p>
+    <span class="course-tag">Instrumento de Practica</span>
+    <h1 class="exam-title">Gestion de las Relaciones<br>en las Organizaciones</h1>
+    <p class="exam-subtitle">Examen de prueba · Estructura del parcial · Sin calificacion · Con retroalimentacion formativa</p>
     <div class="meta-strip">
-      <div class="meta-item"><strong>Modalidad</strong>Solo retroalimentación</div>
-      <div class="meta-item"><strong>Secciones</strong>MCQ · Caso · Síntesis</div>
-      <div class="meta-item"><strong>Extensión esperada</strong>Mínimo 100 palabras (abiertas)</div>
-
-      <div class="meta-item"><strong>Nivel</strong>Media carrera · Administración</div>
+      <div class="meta-item"><strong>Modalidad</strong>Solo retroalimentacion</div>
+      <div class="meta-item"><strong>Secciones</strong>MCQ · Caso · Sintesis</div>
+      <div class="meta-item"><strong>Extension esperada</strong>Minimo 100 palabras en respuestas abiertas</div>
+      <div class="meta-item"><strong>Nivel</strong>Media carrera · Administracion</div>
     </div>
   </div>
 </header>
 
-<!-- ── Progress ── -->
-<div class="progress-wrap"><div class="progress-fill" id="progress-bar"></div></div>
+<div class="progress-wrap" aria-hidden="true"><div class="progress-fill" id="progress-bar"></div></div>
 
 <main class="main">
-
-  <!-- ════════════════════════════════════
-       SECCIÓN I — OPCIÓN MÚLTIPLE
-  ════════════════════════════════════ -->
   <div class="section-label">
     <div class="section-num">I</div>
     <div class="section-info">
-      <h2>Opción Múltiple</h2>
-      <p>2 preguntas · Retroalimentación inmediata para todas las opciones · Sin puntaje</p>
+      <h2>Opcion Multiple</h2>
+      <p>2 preguntas · Retroalimentacion inmediata para todas las opciones · Sin puntaje</p>
     </div>
   </div>
 
-  <!-- ── MCQ 1 ── -->
-  <div class="card">
-    <div class="question-badge">
-      Pregunta 1 — Opción múltiple
+  <section class="card" aria-labelledby="q1-title">
+    <div class="question-badge" id="q1-title">
+      Pregunta 1 - Opcion multiple
       <span class="oa-tag">OA-1 · La empresa como sistema</span>
     </div>
-    <p class="question-text">
-      ¿Cuál de las siguientes opciones <strong>NO</strong> corresponde a una característica de la empresa concebida como sistema?
-    </p>
+    <p class="question-text">¿Cual de las siguientes opciones <strong>NO</strong> corresponde a una caracteristica de la empresa concebida como sistema?</p>
     <div class="options-grid" id="opts-1">
-      <button class="option-btn" onclick="selectMCQ(1,0)">
-        <span class="opt-letter">A</span>
-        <span>Causalidad circular: los eventos al interior del sistema se influyen mutuamente y también interactúan con factores externos.</span>
-      </button>
-      <button class="option-btn" onclick="selectMCQ(1,1)">
-        <span class="opt-letter">B</span>
-        <span>Interdependencia entre las partes que componen la organización.</span>
-      </button>
-      <button class="option-btn" onclick="selectMCQ(1,2)">
-        <span class="opt-letter">C</span>
-        <span>Relaciones dinámicas que evolucionan en función del contexto interno y externo.</span>
-      </button>
-      <button class="option-btn" onclick="selectMCQ(1,3)">
-        <span class="opt-letter">D</span>
-        <span>Aislamiento funcional: cada área opera de forma autónoma, sin influir en las demás ni en el entorno.</span>
-      </button>
+      <button class="option-btn" onclick="selectMCQ(1,0)"><span class="opt-letter">A</span><span>Causalidad circular: los eventos al interior del sistema se influyen mutuamente y tambien interactuan con factores externos.</span></button>
+      <button class="option-btn" onclick="selectMCQ(1,1)"><span class="opt-letter">B</span><span>Interdependencia entre las partes que componen la organizacion.</span></button>
+      <button class="option-btn" onclick="selectMCQ(1,2)"><span class="opt-letter">C</span><span>Relaciones dinamicas que evolucionan en funcion del contexto interno y externo.</span></button>
+      <button class="option-btn" onclick="selectMCQ(1,3)"><span class="opt-letter">D</span><span>Aislamiento funcional: cada area opera de forma autonoma, sin influir en las demas ni en el entorno.</span></button>
     </div>
-    <div class="feedback-box" id="fb-1"></div>
-  </div>
+    <div class="feedback-box" id="fb-1" aria-live="polite"></div>
+  </section>
 
-  <!-- ── MCQ 2 ── -->
-  <div class="card">
-    <div class="question-badge">
-      Pregunta 2 — Opción múltiple
+  <section class="card" aria-labelledby="q2-title">
+    <div class="question-badge" id="q2-title">
+      Pregunta 2 - Opcion multiple
       <span class="oa-tag">OA-2 · Entorno VUCA</span>
     </div>
-    <p class="question-text">
-      Al enfrentarse a una situación de <strong>Ambigüedad</strong> en el marco VUCA, ¿cuál es la respuesta estratégica recomendada para un líder?
-    </p>
+    <p class="question-text">Al enfrentarse a una situacion de <strong>Ambiguedad</strong> en el marco VUCA, ¿cual es la respuesta estrategica recomendada para un lider?</p>
     <div class="options-grid" id="opts-2">
-      <button class="option-btn" onclick="selectMCQ(2,0)">
-        <span class="opt-letter">A</span>
-        <span>Agilidad y experimentación rápida para validar hipótesis en el mercado.</span>
-      </button>
-      <button class="option-btn" onclick="selectMCQ(2,1)">
-        <span class="opt-letter">B</span>
-        <span>Implementar protocolos de seguridad más estrictos para evitar cualquier margen de error.</span>
-      </button>
-      <button class="option-btn" onclick="selectMCQ(2,2)">
-        <span class="opt-letter">C</span>
-        <span>Esperar a tener información suficiente antes de tomar cualquier decisión estratégica.</span>
-      </button>
-      <button class="option-btn" onclick="selectMCQ(2,3)">
-        <span class="opt-letter">D</span>
-        <span>Centralizar la toma de decisiones en un único directivo para evitar interpretaciones variadas.</span>
-      </button>
+      <button class="option-btn" onclick="selectMCQ(2,0)"><span class="opt-letter">A</span><span>Agilidad y experimentacion rapida para validar hipotesis en el mercado.</span></button>
+      <button class="option-btn" onclick="selectMCQ(2,1)"><span class="opt-letter">B</span><span>Implementar protocolos de seguridad mas estrictos para evitar cualquier margen de error.</span></button>
+      <button class="option-btn" onclick="selectMCQ(2,2)"><span class="opt-letter">C</span><span>Esperar a tener informacion suficiente antes de tomar cualquier decision estrategica.</span></button>
+      <button class="option-btn" onclick="selectMCQ(2,3)"><span class="opt-letter">D</span><span>Centralizar la toma de decisiones en un unico directivo para evitar interpretaciones variadas.</span></button>
     </div>
-    <div class="feedback-box" id="fb-2"></div>
-  </div>
+    <div class="feedback-box" id="fb-2" aria-live="polite"></div>
+  </section>
 
-  <!-- ── Clave de respuestas ── -->
   <div id="answer-key-section" style="display:none;">
     <div class="answer-key">
-      <h3>🗝 Clave de Respuestas — Sección I</h3>
+      <h3>Clave de Respuestas - Seccion I</h3>
       <div class="key-grid">
         <div class="key-item">
-          <div style="flex-shrink:0;">
-            <div class="key-q">Pregunta 1</div>
-            <div class="key-a">D</div>
-          </div>
-          <div class="key-explain">El aislamiento funcional contradice el principio de apertura sistémica: un sistema eficiente intercambia información con su entorno y con sus propias partes.</div>
+          <div style="flex-shrink:0;"><div class="key-q">Pregunta 1</div><div class="key-a">D</div></div>
+          <div class="key-explain">El aislamiento funcional contradice el principio de apertura sistemica: un sistema eficiente intercambia informacion con su entorno y con sus propias partes.</div>
         </div>
         <div class="key-item">
-          <div style="flex-shrink:0;">
-            <div class="key-q">Pregunta 2</div>
-            <div class="key-a">A</div>
-          </div>
-          <div class="key-explain">Ante la ambigüedad VUCA, la agilidad y la experimentación permiten aprender de señales poco claras sin paralizarse esperando certeza.</div>
+          <div style="flex-shrink:0;"><div class="key-q">Pregunta 2</div><div class="key-a">A</div></div>
+          <div class="key-explain">Ante la ambiguedad VUCA, la agilidad y la experimentacion permiten aprender de senales poco claras sin paralizarse esperando certeza.</div>
         </div>
       </div>
     </div>
@@ -748,264 +678,358 @@
 
   <hr class="divider">
 
-  <!-- ════════════════════════════════════
-       SECCIÓN II — CASO PRÁCTICO
-  ════════════════════════════════════ -->
   <div class="section-label">
     <div class="section-num">II</div>
     <div class="section-info">
-      <h2>Caso Práctico</h2>
-      <p>1 caso · 1 pregunta de diagnóstico · Conceptos clave y respuesta modelo disponibles</p>
+      <h2>Caso Practico</h2>
+      <p>1 caso · 1 pregunta de diagnostico · Conceptos clave y respuesta modelo disponibles despues de responder</p>
     </div>
   </div>
 
   <div class="case-intro">
-    <h3>Caso: LogiTech — SmartFlow</h3>
-    <p class="case-premise">"La eficiencia tecnológica sin legitimidad social conduce a la degradación de la productividad."</p>
-    <p>
-      La empresa líder en logística y transporte <strong>LogiTech</strong> decidió implementar un sistema de gestión automatizado llamado <strong>SmartFlow</strong> con el objetivo de optimizar sus operaciones. La solución prometía mejorar la eficiencia en la cadena de suministro, reducir costos y ofrecer visibilidad en tiempo real de los envíos.
-    </p>
-    <p>
-      Sin embargo, tras su implementación, surgieron problemas graves: fallas en la operatividad del sistema, resistencia generalizada de los empleados y caída en la satisfacción del cliente. La productividad se deterioró y la organización entró en una crisis de gestión interna que no había sido prevista por la alta gerencia.
-    </p>
+    <h3>Caso: LogiTech - SmartFlow</h3>
+    <p>La empresa lider en logistica y transporte <strong>LogiTech</strong> decidio implementar un sistema de gestion automatizado llamado <strong>SmartFlow</strong> con el objetivo de optimizar sus operaciones. La solucion prometia mejorar la eficiencia en la cadena de suministro, reducir costos y ofrecer visibilidad en tiempo real de los envios.</p>
+    <p>Sin embargo, tras su implementacion, surgieron problemas graves: fallas en la operatividad del sistema, resistencia generalizada de los empleados y caida en la satisfaccion del cliente. La productividad se deterioro y la organizacion entro en una crisis de gestion interna que no habia sido prevista por la alta gerencia.</p>
     <div class="data-grid">
-      <div class="data-card">
-        <div class="d-label">Tipo de herramienta</div>
-        <div class="d-value">SmartFlow (alto costo)</div>
-      </div>
-      <div class="data-card">
-        <div class="d-label">Problema central</div>
-        <div class="d-value">Resistencia + fallas operativas</div>
-      </div>
-      <div class="data-card">
-        <div class="d-label">Impacto</div>
-        <div class="d-value">↓ productividad ↓ satisfacción</div>
-      </div>
-      <div class="data-card">
-        <div class="d-label">Factor ausente</div>
-        <div class="d-value">Legitimidad social</div>
-      </div>
+      <div class="data-card"><div class="d-label">Herramienta</div><div class="d-value">SmartFlow</div></div>
+      <div class="data-card"><div class="d-label">Problema visible</div><div class="d-value">Resistencia + fallas</div></div>
+      <div class="data-card"><div class="d-label">Impacto</div><div class="d-value">Baja productividad</div></div>
+      <div class="data-card"><div class="d-label">Desafio</div><div class="d-value">Adopcion interna</div></div>
     </div>
   </div>
 
-  <!-- Pregunta 3 -->
-  <div class="card">
-    <div class="question-badge">
-      Pregunta 3 — Caso práctico · Diagnóstico
+  <section class="card" aria-labelledby="q3-title">
+    <div class="question-badge" id="q3-title">
+      Pregunta 3 - Caso practico · Diagnostico
       <span class="oa-tag">OA-3 · Habilidades Sociales y Digitales</span>
-     <span class="oa-tag blue">100–300 palabras</span>
+      <span class="oa-tag blue">100-200 palabras</span>
+    </div>
+    <p class="question-text">Sintetice como la carencia de <strong>Habilidades Sociales</strong> en la alta gerencia, especificamente la falta de gestion de conflictos y de vision sistemica, afecto el rendimiento de una herramienta de Habilidades Digitales de alto costo como SmartFlow.</p>
+    <textarea class="open-textarea" id="ans-3a" placeholder="Escribe tu diagnostico aqui..." oninput="handleOpenInput('ans-3a')" aria-describedby="wc-3a q3-hint"></textarea>
+    <div class="word-counter" id="wc-3a">0 palabras (objetivo: 100-200)</div>
+    <p class="unlock-hint" id="q3-hint">Los conceptos clave se desbloquean al alcanzar el minimo de palabras. La respuesta modelo se desbloquea despues de una autoevaluacion breve.</p>
 
+    <div class="self-check">
+      <label for="self-3">Antes de ver el modelo, evalua tu respuesta:</label>
+      <select id="self-3" onchange="handleSelfCheck(3)" disabled>
+        <option value="">Selecciona una opcion</option>
+        <option value="relaciona">Relaciona habilidades sociales, adopcion tecnologica y productividad.</option>
+        <option value="parcial">Menciona los conceptos, pero aun los conecta de forma parcial.</option>
+        <option value="definiciones">Define conceptos, pero no los aplica suficientemente al caso.</option>
+      </select>
+      <p class="unlock-hint">Esta pausa evita que la respuesta modelo reemplace tu propio diagnostico.</p>
     </div>
 
-    <p class="question-text">
-      Sintetice cómo la carencia de <strong>Habilidades Sociales</strong> en la alta gerencia —específicamente la falta de gestión de conflictos y de visión sistémica— afectó el rendimiento de una herramienta de Habilidades Digitales de alto costo como SmartFlow.
-    </p>
-    <textarea class="open-textarea" id="ans-4" style="min-height:220px;" placeholder="Desarrolla tu respuesta aquí..." oninput="countWords('ans-4','wc-4',100,300)"></textarea>
-    <div class="word-counter" id="wc-4">0 palabras (objetivo: 100–300)</div>
-
-
-
     <div class="toggle-row">
-      <button class="rubric-toggle" id="btn-rubric-3" onclick="togglePanel('rubric-3')" disabled title="Responde la pregunta para desbloquear">💡 Ver conceptos clave</button>
-      <button class="rubric-toggle green" id="btn-model-3" onclick="togglePanel('model-3')" disabled title="Responde la pregunta para desbloquear">✅ Ver respuesta modelo</button>
+      <button class="rubric-toggle" id="btn-rubric-3" onclick="togglePanel('rubric-3')" disabled aria-expanded="false" aria-controls="rubric-3">Ver conceptos clave</button>
+      <button class="rubric-toggle green" id="btn-model-3" onclick="togglePanel('model-3')" disabled aria-expanded="false" aria-controls="model-3">Ver respuesta modelo</button>
     </div>
 
     <div class="rubric-panel" id="rubric-3">
-      <h4>Conceptos que debieron estar presentes en tu respuesta</h4>
-      <p>Una respuesta sólida debería haber articulado los siguientes conceptos del curso: <strong>habilidades sociales</strong> (gestión de conflictos, escucha activa, influencia sin autoridad formal) como condición necesaria para que cualquier herramienta digital sea adoptada genuinamente; <strong>visión sistémica</strong>, que implica reconocer que los empleados no son receptores pasivos sino parte del mismo sistema productivo que se quiere optimizar; y <strong>legitimidad social</strong>, el proceso por el cual una innovación es aceptada y sostenida por quienes deben operarla. La ausencia de estos tres elementos convierte una solución técnica eficiente en una fuente de resistencia y pérdida de productividad.</p>
+      <h4>Conceptos y criterios esperados</h4>
+      <p>Una respuesta solida deberia articular habilidades sociales como condicion de adopcion real de cualquier herramienta digital: gestion de conflictos, escucha activa, influencia sin autoridad formal, vision sistemica y legitimidad social. La idea central es que la eficiencia tecnologica no produce valor si el sistema humano que debe operarla no la comprende, no confia en ella o la vive como imposicion.</p>
+      <table class="rubric-table">
+        <thead><tr><th>Criterio</th><th>Logro esperado</th></tr></thead>
+        <tbody>
+          <tr><td>Comprension conceptual</td><td>Distingue habilidades sociales, habilidades digitales y vision sistemica.</td></tr>
+          <tr><td>Aplicacion al caso</td><td>Explica por que SmartFlow falla al no integrar a los empleados en el cambio.</td></tr>
+          <tr><td>Relacion entre conceptos</td><td>Conecta resistencia, conflicto, legitimidad social y productividad.</td></tr>
+          <tr><td>Calidad argumentativa</td><td>Presenta una tesis clara y evita limitarse a definiciones aisladas.</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="model-answer" id="model-3">
-      <h4>Respuesta Modelo — Pregunta 3</h4>
-      <p>La alta gerencia de LogiTech trató SmartFlow como un proyecto de ingeniería, ignorando su dimensión relacional. La falta de gestión de conflictos implicó que la resistencia de los empleados no fue leída como señal legítima de preocupación, sino ignorada o neutralizada por presión jerárquica. La ausencia de visión sistémica hizo que la implementación se planificara como si los empleados fueran receptores pasivos de tecnología, sin considerar que su disposición, comprensión y apropiación del sistema son parte del mismo sistema productivo. El resultado fue predecible: una herramienta técnicamente válida generó caos operativo porque el subsistema humano no fue integrado al proceso de cambio. En otras palabras, SmartFlow fracasó no por sus capacidades digitales, sino porque careció de la legitimidad social necesaria para funcionar: los colaboradores nunca pasaron de la tolerancia forzada a la apropiación real del sistema.</p>
+      <h4>Respuesta Modelo - Pregunta 3</h4>
+      <p>La alta gerencia de LogiTech trato SmartFlow como un proyecto tecnico, ignorando su dimension relacional. La falta de gestion de conflictos implico que la resistencia de los empleados no fuera leida como una senal legitima de preocupacion, sino como un obstaculo que debia neutralizarse. Ademas, la ausencia de vision sistemica hizo que la implementacion se planificara como si los trabajadores fueran receptores pasivos de tecnologia, sin considerar que su comprension, disposicion y apropiacion del sistema forman parte del rendimiento organizacional. Por eso, una herramienta digital costosa termino generando caos operativo: el subsistema humano no fue integrado al proceso de cambio. SmartFlow no fracaso solo por sus fallas tecnicas, sino porque carecio de legitimidad social. Sin confianza, participacion y manejo de tensiones, la innovacion no se transforma en productividad sostenible.</p>
     </div>
-  </div>
+  </section>
 
   <hr class="divider">
 
-  <!-- ════════════════════════════════════
-       SECCIÓN III — PREGUNTA DE SÍNTESIS
-  ════════════════════════════════════ -->
   <div class="section-label">
     <div class="section-num">III</div>
     <div class="section-info">
-      <h2>Pregunta de Síntesis</h2>
-      <p>1 pregunta · Respuesta argumentativa · Conceptos clave y respuesta modelo disponibles</p>
+      <h2>Pregunta de Sintesis</h2>
+      <p>1 pregunta · Respuesta argumentativa · Conceptos clave y respuesta modelo disponibles despues de responder</p>
     </div>
   </div>
 
-  <div class="card">
-    <div class="question-badge">
-      Pregunta 4 — Síntesis y análisis relacional
+  <section class="card" aria-labelledby="q4-title">
+    <div class="question-badge" id="q4-title">
+      Pregunta 4 - Sintesis y analisis relacional
       <span class="oa-tag">OA-5 · Relaciones interpersonales</span>
-      <span class="oa-tag">OA-6 · Confianza y comunicación</span>
-      <span class="oa-tag blue">100–300 palabras</span>
+      <span class="oa-tag">OA-6 · Confianza y comunicacion</span>
+      <span class="oa-tag blue">100-300 palabras</span>
+    </div>
+    <p class="question-text">Explique como influye la <strong>linea sensible personal</strong> en la construccion de una convivencia productiva dentro de un equipo de trabajo. En su respuesta, analice la relacion entre la <strong>defensividad</strong> y la <strong>autorrevelacion</strong> como herramienta para fortalecer la confianza entre colegas.</p>
+    <p class="instruction-note">No defina los conceptos por separado. La respuesta debe mostrar como interactuan: que ocurre cuando se cruza la linea sensible, como aparece la defensividad y de que manera la autorrevelacion puede reconstruir confianza.</p>
+    <textarea class="open-textarea" id="ans-4" style="min-height:220px;" placeholder="Desarrolla tu respuesta aqui..." oninput="handleOpenInput('ans-4')" aria-describedby="wc-4 q4-hint"></textarea>
+    <div class="word-counter" id="wc-4">0 palabras (objetivo: 100-300)</div>
+    <p class="unlock-hint" id="q4-hint">Los conceptos clave se desbloquean al alcanzar el minimo de palabras. La respuesta modelo se desbloquea despues de una autoevaluacion breve.</p>
+
+    <div class="self-check">
+      <label for="self-4">Antes de ver el modelo, evalua tu respuesta:</label>
+      <select id="self-4" onchange="handleSelfCheck(4)" disabled>
+        <option value="">Selecciona una opcion</option>
+        <option value="relaciona">Relaciona linea sensible, defensividad, autorrevelacion y confianza.</option>
+        <option value="parcial">Explica los conceptos, pero la relacion entre ellos puede mejorar.</option>
+        <option value="definiciones">La respuesta todavia funciona mas como definiciones aisladas.</option>
+      </select>
+      <p class="unlock-hint">La autoevaluacion ayuda a comparar tu respuesta con criterios, no solo con una solucion escrita.</p>
     </div>
 
-    <p class="question-text">
-      Explique cómo influye la <strong>"línea sensible personal"</strong> en la construcción de una convivencia productiva dentro de un equipo de trabajo. En su respuesta, analice la relación entre la <strong>defensividad</strong> y la <strong>autorrevelación</strong> como herramienta para fortalecer la confianza entre colegas.
-    </p>
-
-    <textarea class="open-textarea" id="ans-4" style="min-height:220px;" placeholder="Desarrolla tu respuesta aquí..." oninput="countWords('ans-4','wc-4',200,300)"></textarea>
-    <div class="word-counter" id="wc-4">0 palabras (objetivo: 100–300)</div>
-
     <div class="toggle-row">
-      <button class="rubric-toggle" id="btn-rubric-4" onclick="togglePanel('rubric-4')" disabled title="Responde la pregunta para desbloquear">💡 Ver conceptos clave</button>
-      <button class="rubric-toggle green" id="btn-model-4" onclick="togglePanel('model-4')" disabled title="Responde la pregunta para desbloquear">✅ Ver respuesta modelo</button>
+      <button class="rubric-toggle" id="btn-rubric-4" onclick="togglePanel('rubric-4')" disabled aria-expanded="false" aria-controls="rubric-4">Ver conceptos clave</button>
+      <button class="rubric-toggle green" id="btn-model-4" onclick="togglePanel('model-4')" disabled aria-expanded="false" aria-controls="model-4">Ver respuesta modelo</button>
     </div>
 
     <div class="rubric-panel" id="rubric-4">
-      <h4>Conceptos que debieron estar presentes en tu respuesta</h4>
-      <p>Una respuesta completa debería haber integrado los siguientes conceptos del curso: la <strong>línea sensible personal</strong> como umbral de percepción de amenaza a la propia identidad o autoconcepto en el contexto de las interacciones laborales; la <strong>defensividad</strong> como respuesta protectora que, aunque natural, cierra los canales de comunicación genuina y erosiona la confianza colectiva cuando se vuelve crónica; y la <strong>autorrevelación</strong> como acto voluntario de hacer visibles los propios límites o percepciones, que genera reciprocidad y reduce las conductas defensivas en el equipo. La articulación entre los tres conceptos —no su definición aislada— es lo que distingue una respuesta de comprensión profunda.</p>
+      <h4>Conceptos y criterios esperados</h4>
+      <p>Una respuesta completa deberia integrar la linea sensible personal como umbral de amenaza al autoconcepto; la defensividad como respuesta protectora que cierra la comunicacion; y la autorrevelacion como acto voluntario que hace visibles limites, percepciones o necesidades, generando reciprocidad y confianza. El valor esta en articular el ciclo completo, no en listar definiciones.</p>
+      <table class="rubric-table">
+        <thead><tr><th>Criterio</th><th>Logro esperado</th></tr></thead>
+        <tbody>
+          <tr><td>Comprension conceptual</td><td>Explica la linea sensible como umbral relacional, no como debilidad individual.</td></tr>
+          <tr><td>Analisis relacional</td><td>Conecta defensividad con deterioro de comunicacion y confianza.</td></tr>
+          <tr><td>Uso de autorrevelacion</td><td>Plantea la autorrevelacion como herramienta estrategica y cuidadosa.</td></tr>
+          <tr><td>Calidad argumentativa</td><td>Sostiene una idea central con ejemplos o consecuencias organizacionales.</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="model-answer" id="model-4">
-      <h4>Respuesta Modelo — Pregunta 4 (puntos clave esperados)</h4>
-      <p><strong>Línea sensible personal:</strong> Es el umbral a partir del cual un comentario, crítica o interacción es percibida como una amenaza a la identidad, el autoconcepto o los valores de la persona. En el contexto laboral, esta línea varía entre individuos y puede activarse ante retroalimentación negativa, cuestionamiento de competencias o conflictos de rol. La línea sensible no es un defecto, sino un mecanismo de protección del sentido de valor propio.</p>
-      <p><strong>Defensividad:</strong> Cuando se cruza la línea sensible, la respuesta natural es la defensividad: el individuo cierra canales de comunicación, justifica sus acciones o ataca al interlocutor. Aunque adaptativa a corto plazo, la defensividad crónica deteriora la confianza en el equipo porque impide que el diálogo sea genuino y los errores sean procesados de forma colectiva.</p>
-      <p><strong>Autorrevelación estratégica:</strong> La autorrevelación —compartir voluntariamente información sobre las propias percepciones, límites o estados— puede interrumpir el ciclo defensivo. Al hacer visible la propia línea sensible, la persona invita al interlocutor a ajustar la interacción sin que este tenga que adivinarlo. Esto genera reciprocidad: cuando un colega revela su vulnerabilidad, el otro tiende a responder con mayor cuidado. El resultado es un equipo donde la convivencia productiva no depende de la ausencia de tensiones, sino de la capacidad de nombrarlas sin que destruyan el vínculo.</p>
+      <h4>Respuesta Modelo - Pregunta 4</h4>
+      <p>La linea sensible personal es el umbral a partir del cual una persona interpreta una critica, comentario o tension como amenaza a su identidad, competencia o valor dentro del equipo. Cuando ese umbral se cruza, suele aparecer la defensividad: la persona justifica sus acciones, se cierra al dialogo, contraataca o evita la conversacion. Aunque esta reaccion protege momentaneamente el autoconcepto, si se vuelve habitual deteriora la convivencia productiva, porque impide procesar errores y diferencias de forma abierta.</p>
+      <p>La autorrevelacion puede interrumpir ese ciclo cuando se usa de manera responsable. Al expresar percepciones, limites o preocupaciones, la persona hace visible parte de su linea sensible y reduce la necesidad de que los demas adivinen que la activa. Esto favorece reciprocidad: si un colega comunica con honestidad lo que le afecta, el otro puede responder con mas cuidado y menos juicio. Asi, la confianza no surge por evitar tensiones, sino por aprender a nombrarlas sin destruir el vinculo de trabajo.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ══ BOTTOM ACTIONS ══ -->
   <div class="bottom-actions">
     <h2>¿Terminaste el examen de prueba?</h2>
-    <p>Revisa las respuestas modelo y rúbricas disponibles en cada pregunta para evaluar la calidad de tus respuestas. Recuerda: este es un instrumento formativo, sin calificación.</p>
-    <button class="btn-primary" onclick="revealAll()">📖 Mostrar conceptos clave y respuestas modelo</button>
-    <button class="btn-secondary" onclick="resetExam()">🔄 Reiniciar examen</button>
+    <p>Primero responde y autoevalua tus preguntas abiertas. Luego compara con conceptos clave, rubricas y respuestas modelo. Este instrumento es formativo y no tiene calificacion.</p>
+    <button class="btn-primary" onclick="revealAvailable()">Mostrar retroalimentacion disponible</button>
+    <button class="btn-secondary" onclick="resetExam()">Reiniciar examen</button>
   </div>
-
 </main>
 
 <script>
-// ── MCQ DATA ──
+const STORAGE_KEY = 'gro-examen-prueba-v2';
+
 const mcqData = {
   1: {
-    correct: 3, // D
+    correct: 3,
     feedbacks: [
-      // A
-      `<span class="fb-label">✓ Opción A — Característica válida del sistema</span>La causalidad circular sí es un principio sistémico: los elementos de la empresa no se relacionan en cadenas lineales de causa-efecto, sino en bucles donde cada parte influye en las demás y en el entorno, que a su vez retroalimenta al sistema. Esta opción NO debería marcarse.`,
-      // B
-      `<span class="fb-label">✓ Opción B — Característica válida del sistema</span>La interdependencia es uno de los principios fundacionales de la teoría de sistemas aplicada a organizaciones: ninguna área puede optimizarse de forma aislada porque su desempeño afecta y es afectado por el resto. Esta opción NO debería marcarse.`,
-      // C
-      `<span class="fb-label">✓ Opción C — Característica válida del sistema</span>Las relaciones dinámicas reflejan que el sistema organizacional no es estático: evoluciona en respuesta a cambios internos y del entorno. Esta adaptabilidad es precisamente lo que distingue a un sistema abierto de una estructura rígida. Esta opción NO debería marcarse.`,
-      // D ✓
-      `<span class="fb-label">✅ Opción D — Respuesta correcta</span>El aislamiento funcional contradice directamente la concepción sistémica de la empresa. Una de las claves del funcionamiento eficiente de los sistemas es su capacidad de intercambiar información con el entorno y con sus propias partes. Una organización que opera en silos impermeables no puede coordinar recursos, anticipar riesgos ni responder a cambios externos — características esenciales de todo sistema abierto.`
+      `<span class="fb-label">Opcion A - Caracteristica valida del sistema</span>La causalidad circular si es un principio sistemico: los elementos de la empresa se relacionan en bucles donde cada parte influye en las demas y en el entorno, que a su vez retroalimenta al sistema. Esta opcion no deberia marcarse.`,
+      `<span class="fb-label">Opcion B - Caracteristica valida del sistema</span>La interdependencia es uno de los principios fundacionales de la teoria de sistemas aplicada a organizaciones: ninguna area puede optimizarse de forma aislada porque su desempeno afecta y es afectado por el resto. Esta opcion no deberia marcarse.`,
+      `<span class="fb-label">Opcion C - Caracteristica valida del sistema</span>Las relaciones dinamicas reflejan que el sistema organizacional no es estatico: evoluciona en respuesta a cambios internos y del entorno. Esta opcion no deberia marcarse.`,
+      `<span class="fb-label">Respuesta correcta - Opcion D</span>El aislamiento funcional contradice directamente la concepcion sistemica de la empresa. Un sistema eficiente intercambia informacion con el entorno y con sus propias partes. Una organizacion que opera en silos impermeables no puede coordinar recursos, anticipar riesgos ni responder a cambios externos.`
     ]
   },
   2: {
-    correct: 0, // A
+    correct: 0,
     feedbacks: [
-      // A ✓
-      `<span class="fb-label">✅ Opción A — Respuesta correcta</span>La ambigüedad en el entorno VUCA implica que las señales disponibles son borrosas o contradictorias: no se sabe qué causa qué, ni qué interpretación es correcta. La agilidad y la experimentación son la respuesta apropiada porque permiten generar aprendizaje iterativo sin esperar certeza total. El líder que experimenta rápido reduce el costo de estar equivocado y acumula evidencia real para decisiones posteriores.`,
-      // B
-      `<span class="fb-label">✗ Opción B — Confunde Ambigüedad con Riesgo controlable</span>Los protocolos de seguridad estrictos son una respuesta adecuada cuando los riesgos son conocidos y medibles (contexto de Volatilidad o Complejidad gestionable). Ante la Ambigüedad, donde incluso el diagnóstico del problema es incierto, los protocolos rígidos no resuelven el problema de interpretación: solo añaden burocracia a la confusión. La respuesta estratégica al VUCA requiere flexibilidad, no control normativo adicional.`,
-      // C
-      `<span class="fb-label">✗ Opción C — La parálisis por análisis agrava la ambigüedad</span>Esperar información suficiente es una trampa en contextos de ambigüedad: por definición, en este cuadrante del VUCA la información nunca llegará "suficiente" antes de actuar. Un líder que espera certeza bajo ambigüedad no gestiona el entorno, lo padece. La acción informada pero provisional —aprender haciendo— es la competencia clave que distingue a los líderes efectivos en condiciones VUCA.`,
-      // D
-      `<span class="fb-label">✗ Opción D — La centralización bloquea la capacidad de respuesta</span>Centralizar decisiones ante la ambigüedad concentra en una sola persona la responsabilidad de interpretar señales poco claras, lo que aumenta el riesgo de error y elimina la diversidad de perspectivas que podría ayudar a desenredar la ambigüedad. El liderazgo efectivo en VUCA tiende a distribuir la capacidad de decisión y a fomentar la experimentación descentralizada, no a contraerla.`
+      `<span class="fb-label">Respuesta correcta - Opcion A</span>La ambiguedad en VUCA implica que las senales disponibles son borrosas o contradictorias. La agilidad y la experimentacion permiten generar aprendizaje iterativo sin esperar certeza total.`,
+      `<span class="fb-label">Opcion B - Confunde ambiguedad con riesgo controlable</span>Los protocolos estrictos pueden ayudar cuando los riesgos son conocidos y medibles. Ante la ambiguedad, los protocolos rigidos no resuelven el problema de interpretacion: solo agregan control a una situacion que requiere aprendizaje.`,
+      `<span class="fb-label">Opcion C - La espera agrava la ambiguedad</span>Esperar informacion suficiente es una trampa en contextos ambiguos. La informacion rara vez llega completa antes de actuar; por eso se requiere accion provisional, observacion y ajuste.`,
+      `<span class="fb-label">Opcion D - La centralizacion reduce perspectivas</span>Centralizar decisiones concentra la interpretacion de senales poco claras en una sola persona. En ambiguedad conviene ampliar perspectivas y probar hipotesis, no reducir la lectura del entorno.`
     ]
   }
 };
 
-let answered = [false, false];
+let state = {
+  answered: [false, false],
+  selected: [null, null],
+  openAnswers: { 'ans-3a': '', 'ans-4': '' },
+  selfChecks: { 3: '', 4: '' },
+  openPanels: []
+};
+
+const openQuestionConfig = {
+  'ans-3a': { counterId: 'wc-3a', min: 100, max: 200, q: 3 },
+  'ans-4': { counterId: 'wc-4', min: 100, max: 300, q: 4 }
+};
+
+function announce(message) {
+  document.getElementById('status-region').textContent = message;
+}
+
+function getWordCount(text) {
+  const clean = text.trim();
+  return clean === '' ? 0 : clean.split(/\s+/).length;
+}
 
 function selectMCQ(q, optIdx) {
-  if (answered[q-1]) return;
-  answered[q-1] = true;
-  const correct = mcqData[q].correct;
-  const opts = document.querySelectorAll(`#opts-${q} .option-btn`);
-  opts.forEach((btn, i) => {
-    btn.disabled = true;
-    if (i === correct) btn.classList.add('correct');
-    else if (i === optIdx && i !== correct) btn.classList.add('wrong');
-  });
-  const fb = document.getElementById(`fb-${q}`);
-  fb.innerHTML = mcqData[q].feedbacks[optIdx];
-  fb.className = 'feedback-box show ' + (optIdx === correct ? 'correct-fb' : 'wrong-fb');
-  if (optIdx === correct) launchConfetti();
-  updateProgress();
-  if (answered[0] && answered[1]) {
+  if (state.answered[q - 1]) return;
+  state.answered[q - 1] = true;
+  state.selected[q - 1] = optIdx;
+  renderMCQ(q);
+  if (optIdx === mcqData[q].correct) launchConfetti();
+  if (state.answered[0] && state.answered[1]) {
     const aks = document.getElementById('answer-key-section');
     aks.style.display = 'block';
-    setTimeout(() => aks.scrollIntoView({behavior:'smooth', block:'nearest'}), 200);
+    setTimeout(() => aks.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 200);
   }
+  saveState();
+  updateProgress();
+}
+
+function renderMCQ(q) {
+  const selected = state.selected[q - 1];
+  const opts = document.querySelectorAll(`#opts-${q} .option-btn`);
+  opts.forEach((btn, i) => {
+    btn.disabled = state.answered[q - 1];
+    btn.classList.remove('correct', 'wrong');
+    btn.removeAttribute('aria-pressed');
+    if (!state.answered[q - 1]) return;
+    if (i === mcqData[q].correct) btn.classList.add('correct');
+    if (i === selected && i !== mcqData[q].correct) btn.classList.add('wrong');
+    if (i === selected) btn.setAttribute('aria-pressed', 'true');
+  });
+  const fb = document.getElementById(`fb-${q}`);
+  if (state.answered[q - 1]) {
+    fb.innerHTML = mcqData[q].feedbacks[selected];
+    fb.className = 'feedback-box show ' + (selected === mcqData[q].correct ? 'correct-fb' : 'wrong-fb');
+    announce(`Retroalimentacion disponible para la pregunta ${q}.`);
+  } else {
+    fb.className = 'feedback-box';
+    fb.innerHTML = '';
+  }
+}
+
+function handleOpenInput(textareaId) {
+  state.openAnswers[textareaId] = document.getElementById(textareaId).value;
+  updateOpenQuestion(textareaId);
+  saveState();
+  updateProgress();
+}
+
+function updateOpenQuestion(textareaId) {
+  const config = openQuestionConfig[textareaId];
+  const text = document.getElementById(textareaId).value;
+  const words = getWordCount(text);
+  const counter = document.getElementById(config.counterId);
+  const withinRange = words >= config.min && words <= config.max;
+  counter.textContent = `${words} palabras (objetivo: ${config.min}-${config.max})`;
+  counter.className = 'word-counter' + (withinRange ? ' ok' : words > config.max ? ' warn' : '');
+
+  const minReached = words >= config.min;
+  document.getElementById(`btn-rubric-${config.q}`).disabled = !minReached;
+  document.getElementById(`self-${config.q}`).disabled = !minReached;
+  document.getElementById(`btn-model-${config.q}`).disabled = !(minReached && state.selfChecks[config.q]);
+}
+
+function handleSelfCheck(q) {
+  state.selfChecks[q] = document.getElementById(`self-${q}`).value;
+  const textareaId = q === 3 ? 'ans-3a' : 'ans-4';
+  updateOpenQuestion(textareaId);
+  saveState();
+  if (state.selfChecks[q]) announce(`Autoevaluacion registrada para la pregunta ${q}. Respuesta modelo desbloqueada.`);
 }
 
 function togglePanel(id) {
-  document.getElementById(id).classList.toggle('open');
+  const panel = document.getElementById(id);
+  const isOpen = panel.classList.toggle('open');
+  const btn = document.querySelector(`[aria-controls="${id}"]`);
+  if (btn) btn.setAttribute('aria-expanded', String(isOpen));
+  state.openPanels = Array.from(document.querySelectorAll('.rubric-panel.open, .model-answer.open')).map(el => el.id);
+  saveState();
 }
 
-function revealAll() {
-  ['rubric-3','model-3','rubric-4','model-4'].forEach(id => {
-    document.getElementById(id).classList.add('open');
+function revealAvailable() {
+  ['rubric-3', 'model-3', 'rubric-4', 'model-4'].forEach(id => {
+    const btn = document.querySelector(`[aria-controls="${id}"]`);
+    if (btn && !btn.disabled) {
+      document.getElementById(id).classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
-  document.querySelector('.bottom-actions').scrollIntoView({behavior:'smooth'});
+  state.openPanels = Array.from(document.querySelectorAll('.rubric-panel.open, .model-answer.open')).map(el => el.id);
+  saveState();
+  announce('Se mostro la retroalimentacion que ya estaba desbloqueada.');
 }
 
 function resetExam() {
-  if (!confirm('¿Reiniciar el examen de prueba? Se borrarán todas tus respuestas.')) return;
-  answered = [false, false];
-  [1,2].forEach(q => {
-    document.querySelectorAll(`#opts-${q} .option-btn`).forEach(btn => {
-      btn.disabled = false;
-      btn.classList.remove('correct','wrong');
-    });
-    const fb = document.getElementById(`fb-${q}`);
-    fb.className = 'feedback-box';
-    fb.innerHTML = '';
-  });
+  if (!confirm('¿Reiniciar el examen de prueba? Se borraran todas tus respuestas guardadas.')) return;
+  state = {
+    answered: [false, false],
+    selected: [null, null],
+    openAnswers: { 'ans-3a': '', 'ans-4': '' },
+    selfChecks: { 3: '', 4: '' },
+    openPanels: []
+  };
+  localStorage.removeItem(STORAGE_KEY);
+  [1,2].forEach(renderMCQ);
   document.getElementById('answer-key-section').style.display = 'none';
-  ['ans-3a','ans-4'].forEach(id => document.getElementById(id).value = '');
-  const wc3a = document.getElementById('wc-3a');
-  wc3a.textContent = '0 palabras (objetivo: 100–300)';
-  wc3a.className = 'word-counter';
-  const wc4 = document.getElementById('wc-4');
-  wc4.textContent = '0 palabras (objetivo: 100–300)';
-  wc4.className = 'word-counter';
+  ['ans-3a','ans-4'].forEach(id => {
+    document.getElementById(id).value = '';
+    updateOpenQuestion(id);
+  });
+  [3,4].forEach(q => document.getElementById(`self-${q}`).value = '');
   ['rubric-3','model-3','rubric-4','model-4'].forEach(id => {
     document.getElementById(id).classList.remove('open');
-  });
-  ['btn-rubric-3','btn-model-3','btn-rubric-4','btn-model-4'].forEach(id => {
-    document.getElementById(id).disabled = true;
+    const btn = document.querySelector(`[aria-controls="${id}"]`);
+    if (btn) btn.setAttribute('aria-expanded', 'false');
   });
   updateProgress();
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-
-function countWords(textareaId, counterId, min, max) {
-  const text = document.getElementById(textareaId).value.trim();
-  const words = text === '' ? 0 : text.split(/\s+/).length;
-  const el = document.getElementById(counterId);
-  el.textContent = `${words} palabras (objetivo: ${min}–${max})`;
-  el.className = 'word-counter' + (words >= min && words <= max ? ' ok' : words > max ? ' warn' : '');
-
-  // Unlock feedback buttons once minimum reached
-  const unlocked = words >= min;
-  if (textareaId === 'ans-3a') {
-    document.getElementById('btn-rubric-3').disabled = !unlocked;
-    document.getElementById('btn-model-3').disabled = !unlocked;
-  }
-  if (textareaId === 'ans-4') {
-    document.getElementById('btn-rubric-4').disabled = !unlocked;
-    document.getElementById('btn-model-4').disabled = !unlocked;
-  }
-
-  updateProgress();
+  announce('Examen reiniciado.');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function updateProgress() {
-  let done = answered.filter(Boolean).length;
-  ['ans-3a','ans-4'].forEach(id => {
-    const text = document.getElementById(id).value.trim();
-    if (text.split(/\s+/).length >= 30) done++;
+  let done = state.answered.filter(Boolean).length;
+  Object.entries(openQuestionConfig).forEach(([id, config]) => {
+    if (getWordCount(document.getElementById(id).value) >= config.min) done++;
   });
   document.getElementById('progress-bar').style.width = ((done / 4) * 100) + '%';
 }
 
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function loadState() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return;
+  try {
+    const saved = JSON.parse(raw);
+    state = {
+      answered: Array.isArray(saved.answered) ? saved.answered : [false, false],
+      selected: Array.isArray(saved.selected) ? saved.selected : [null, null],
+      openAnswers: { 'ans-3a': saved.openAnswers?.['ans-3a'] || '', 'ans-4': saved.openAnswers?.['ans-4'] || '' },
+      selfChecks: { 3: saved.selfChecks?.[3] || '', 4: saved.selfChecks?.[4] || '' },
+      openPanels: Array.isArray(saved.openPanels) ? saved.openPanels : []
+    };
+  } catch {
+    localStorage.removeItem(STORAGE_KEY);
+  }
+}
+
+function renderState() {
+  [1,2].forEach(renderMCQ);
+  document.getElementById('answer-key-section').style.display = state.answered[0] && state.answered[1] ? 'block' : 'none';
+  Object.entries(state.openAnswers).forEach(([id, value]) => {
+    document.getElementById(id).value = value;
+    updateOpenQuestion(id);
+  });
+  [3,4].forEach(q => {
+    document.getElementById(`self-${q}`).value = state.selfChecks[q] || '';
+    handleSelfCheck(q);
+  });
+  state.openPanels.forEach(id => {
+    const panel = document.getElementById(id);
+    const btn = document.querySelector(`[aria-controls="${id}"]`);
+    if (panel && btn && !btn.disabled) {
+      panel.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+  updateProgress();
+}
+
 function launchConfetti() {
   const container = document.getElementById('confetti-container');
-  const colors = ['#c8522a','#d4a017','#2a6c8f','#2d6a4f','#764ba2','#e74c3c'];
+  const colors = ['#c8522a', '#d4a017', '#2a6c8f', '#2d6a4f', '#764ba2', '#e74c3c'];
   for (let i = 0; i < 55; i++) {
     const p = document.createElement('div');
     p.className = 'confetti-piece';
@@ -1022,10 +1046,9 @@ function launchConfetti() {
   }
 }
 
-updateProgress();
-updateProgress();
+loadState();
+renderState();
 </script>
-
 </div>
 
 <script>
@@ -1047,7 +1070,7 @@ background:white;
 border-radius:16px;
 box-shadow:0 4px 20px rgba(0,0,0,.08);
 ">
-<h1>Periodo de práctica cerrado</h1>
+<h1>Periodo de practica cerrado</h1>
 <p>
 Este examen estuvo disponible solo del 30 de abril al 4 de mayo.
 </p>
@@ -1055,7 +1078,5 @@ Este examen estuvo disponible solo del 30 de abril al 4 de mayo.
 `;
 }
 </script>
-
-
 </body>
 </html>
