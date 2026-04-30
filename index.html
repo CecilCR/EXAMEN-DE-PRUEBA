@@ -640,7 +640,8 @@
     <div class="meta-strip">
       <div class="meta-item"><strong>Modalidad</strong>Solo retroalimentación</div>
       <div class="meta-item"><strong>Secciones</strong>MCQ · Caso · Síntesis</div>
-      <div class="meta-item"><strong>Extensión esperada</strong>200–300 palabras (abiertas)</div>
+      <div class="meta-item"><strong>Extensión esperada</strong>Mínimo 100 palabras (abiertas)</div>
+
       <div class="meta-item"><strong>Nivel</strong>Media carrera · Administración</div>
     </div>
   </div>
@@ -792,14 +793,17 @@
     <div class="question-badge">
       Pregunta 3 — Caso práctico · Diagnóstico
       <span class="oa-tag">OA-3 · Habilidades Sociales y Digitales</span>
-      <span class="oa-tag blue">100–200 palabras</span>
+     <span class="oa-tag blue">100–300 palabras</span>
+
     </div>
 
     <p class="question-text">
       Sintetice cómo la carencia de <strong>Habilidades Sociales</strong> en la alta gerencia —específicamente la falta de gestión de conflictos y de visión sistémica— afectó el rendimiento de una herramienta de Habilidades Digitales de alto costo como SmartFlow.
     </p>
-    <textarea class="open-textarea" id="ans-3a" placeholder="Escribe tu diagnóstico aquí..." oninput="countWords('ans-3a','wc-3a',100,200)"></textarea>
-    <div class="word-counter" id="wc-3a">0 palabras (objetivo: 100–200)</div>
+    <textarea class="open-textarea" id="ans-4" style="min-height:220px;" placeholder="Desarrolla tu respuesta aquí..." oninput="countWords('ans-4','wc-4',100,300)"></textarea>
+    <div class="word-counter" id="wc-4">0 palabras (objetivo: 100–300)</div>
+
+
 
     <div class="toggle-row">
       <button class="rubric-toggle" id="btn-rubric-3" onclick="togglePanel('rubric-3')" disabled title="Responde la pregunta para desbloquear">💡 Ver conceptos clave</button>
@@ -835,7 +839,7 @@
       Pregunta 4 — Síntesis y análisis relacional
       <span class="oa-tag">OA-5 · Relaciones interpersonales</span>
       <span class="oa-tag">OA-6 · Confianza y comunicación</span>
-      <span class="oa-tag blue">200–300 palabras</span>
+      <span class="oa-tag blue">100–300 palabras</span>
     </div>
 
     <p class="question-text">
@@ -843,7 +847,7 @@
     </p>
 
     <textarea class="open-textarea" id="ans-4" style="min-height:220px;" placeholder="Desarrolla tu respuesta aquí..." oninput="countWords('ans-4','wc-4',200,300)"></textarea>
-    <div class="word-counter" id="wc-4">0 palabras (objetivo: 200–300)</div>
+    <div class="word-counter" id="wc-4">0 palabras (objetivo: 100–300)</div>
 
     <div class="toggle-row">
       <button class="rubric-toggle" id="btn-rubric-4" onclick="togglePanel('rubric-4')" disabled title="Responde la pregunta para desbloquear">💡 Ver conceptos clave</button>
@@ -954,10 +958,10 @@ function resetExam() {
   document.getElementById('answer-key-section').style.display = 'none';
   ['ans-3a','ans-4'].forEach(id => document.getElementById(id).value = '');
   const wc3a = document.getElementById('wc-3a');
-  wc3a.textContent = '0 palabras (objetivo: 100–200)';
+  wc3a.textContent = '0 palabras (objetivo: 100–300)';
   wc3a.className = 'word-counter';
   const wc4 = document.getElementById('wc-4');
-  wc4.textContent = '0 palabras (objetivo: 200–300)';
+  wc4.textContent = '0 palabras (objetivo: 100–300)';
   wc4.className = 'word-counter';
   ['rubric-3','model-3','rubric-4','model-4'].forEach(id => {
     document.getElementById(id).classList.remove('open');
